@@ -1,9 +1,9 @@
 
 FROM java:7
 
-# COPY src /home/root/javahelloworld/src
+COPY src /home/root/javahelloworld/src
 
-# WORKDIR /home/root/javahelloworld
+WORKDIR /home/root/javahelloworld
 
 # ENV FOO bar
 
@@ -11,13 +11,13 @@ FROM java:7
 
 # `RUN mkdir bin
 
-# RUN javac -d bin src/HelloWorld.java
+RUN javac -d bin src/HelloWorld.java
 
-# ENTRYPOINT ["java"]
+ENTRYPOINT ["java"]
 
-# CMD ["-cp", "bin", "HelloWorld"]
+CMD ["-cp", "bin", "HelloWorld"]
 
-EXPOSE 80 8080
+#EXPOSE 80 8080
 
 # RUN mkdir /data/myvol -p
 
